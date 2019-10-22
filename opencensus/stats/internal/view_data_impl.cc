@@ -44,6 +44,8 @@ ViewDataImpl::Type ViewDataImpl::TypeForDescriptor(
               ABSL_ASSERT(false && "Unknown measure_descriptor type.");
               return ViewDataImpl::Type::kDouble;
           }
+          ABSL_ASSERT(false && "Unknown measure_descriptor type.");
+          return ViewDataImpl::Type::kDouble;
         case Aggregation::Type::kCount:
           return ViewDataImpl::Type::kInt64;
         case Aggregation::Type::kDistribution:
@@ -52,6 +54,8 @@ ViewDataImpl::Type ViewDataImpl::TypeForDescriptor(
           ABSL_ASSERT(false && "Unknown aggregation type.");
           return ViewDataImpl::Type::kDouble;
       }
+      ABSL_ASSERT(false && "Unknown measure_descriptor type.");
+      return ViewDataImpl::Type::kDouble;
     case AggregationWindow::Type::kInterval:
       return ViewDataImpl::Type::kStatsObject;
   }
